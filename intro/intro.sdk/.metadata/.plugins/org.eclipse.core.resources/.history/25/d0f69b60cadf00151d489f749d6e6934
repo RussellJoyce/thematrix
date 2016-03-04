@@ -1,0 +1,95 @@
+/*****************************************************
+Getting Started Guild for Zybo
+
+This demo displays the status the switches on the
+LEDs and prints a message to the serial communication
+when a button is pressed
+
+Terminal Settings:
+   -Baud: 115200
+   -Data bits: 8
+   -Parity: no
+   -Stop bits: 1
+
+1/6/14: Created by MarshallW
+****************************************************/
+
+#include <stdio.h>
+#include "platform.h"
+#include <xgpio.h>
+#include "xparameters.h"
+#include "sleep.h"
+
+#define CLK		0b0010000
+#define LATCH 	0b0100000
+#define OE		0b1000000
+#define addr(x)	x
+#define RGB_CHANNEL 2
+#define CTRL_CHANNEL 1
+
+int main()
+{
+   XGpio sw_button_input, led_output, pmod_output;
+   int button_data = 0;
+   int switch_data = 0;
+   int xor_mask = 0;
+   int rgb;
+   int control;
+   int oe_state;
+
+   XGpio_Initialize(&sw_button_input, XPAR_AXI_GPIO_0_DEVICE_ID);	//initialize input XGpio variable
+   XGpio_Initialize(&led_output, XPAR_AXI_GPIO_1_DEVICE_ID);	//initialize output XGpio variable
+   XGpio_Initialize(&pmod_output, XPAR_AXI_GPIO_2_DEVICE_ID);	//initialize output XGpio variable
+
+   XGpio_SetDataDirection(&sw_button_input, RGB_CHANNEL, 0xF);			//set first channel tristate buffer to input
+   XGpio_SetDataDirection(&sw_button_input, CTRL_CHANNEL, 0xF);			//set second channel tristate buffer to input
+
+   // Note: pmod output 1 is control, pmod output 2 is data.
+   XGpio_SetDataDirection(&led_output, 1, 0x0);		//set first channel tristate buffer to output
+   XGpio_SetDataDirection(&pmod_output, 1, 0x0);		//set first channel tristate buffer to output
+   XGpio_SetDataDirection(&pmod_output, 2, 0x0);		//set first channel tristate buffer to output
+
+   init_platform();
+
+   // Presumably things start at 0, but just to be sure...
+   XGpio_DiscreteWrite(&pmod_output, RGB_CHANNEL, 0);
+   XGpio_DiscreteWrite(&pmod_output, CTRL_CHANNEL, 0);
+
+   // Write color data
+   rgb = 0b100;
+   XGpio_DiscreteWrite(&pmod_output, RGB_CHANNEL, rgb);
+
+   // Toggle clock signal
+   XGpio_DiscreteSet(&pmod_output, CTRL_CHANNEL, CLK);
+   XGpio_DiscreteClear(&pmod_output, CTRL_CHANNEL, CLK);
+
+   // Toggle latch
+   XGpio_DiscreteSet(&pmod_output, CTRL_CHANNEL, LATCH);
+   XGpio_DiscreteClear(&pmod_output, CTRL_CHANNEL, LATCH);
+
+   // Output enable
+   XGpio_DiscreteSet(&pmod_output, CTRL_CHANNEL, OE);
+   oe_state = 1;
+
+   while(1){
+	  if(oe_state) {
+		  XGpio_DiscreteClear(&pmod_output, CTRL_CHANNEL, OE);
+		  oe_state = 0;
+	  }
+	  else {
+		  XGpio_DiscreteSet(&pmod_output, CTRL_CHANNEL, OE);
+		  oe_state = 1;
+	  }
+      switch_data = XGpio_DiscreteRead(&sw_button_input, 2);	//get switch data
+
+      button_data = XGpio_DiscreteRead(&sw_button_input, 1);	//get button data
+
+      xor_mask ^= button_data;
+      XGpio_DiscreteWrite(&led_output, 1, switch_data ^ xor_mask);	//write switch data to the LEDs
+
+      usleep(200000);			//delay
+
+   }
+   cleanup_platform();
+   return 0;
+}
