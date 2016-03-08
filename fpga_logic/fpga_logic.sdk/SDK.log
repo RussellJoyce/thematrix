@@ -1,0 +1,282 @@
+11:31:17 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:31:27 INFO  : XSDB server has started successfully.
+11:31:27 INFO  : Processing command line option -hwspec /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+11:41:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:41:57 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:42:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:42:18 INFO  : 'fpga -state' command is executed.
+11:42:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:19 INFO  : Sourcing of '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:42:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:42:19 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:42:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:42:20 INFO  : 'stop' command is executed.
+11:42:53 INFO  : 'ps7_init' command is executed.
+11:42:54 INFO  : 'ps7_post_config' command is executed.
+11:42:54 INFO  : 'con' command is executed.
+11:42:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+----------------End of Script----------------
+
+11:42:55 INFO  : Memory regions updated for context APU
+13:32:32 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:35:32 ERROR : Timed out. 180 seconds have elapsed while waiting for XSDB server to launch.
+13:35:32 WARN  : Unexpected exception occurred.
+java.lang.Exception: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.Command.<init>(Command.java:83)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$8.<init>(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueTcfCmd(XSDBCommandManager.java:384)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.access$4(XSDBCommandManager.java:381)
+	at com.xilinx.sdk.xsdb.XSDBCommandManager$7.run(XSDBCommandManager.java:376)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.Error: Channel is waiting for Hello message
+	at org.eclipse.tcf.core.AbstractChannel.sendCommand(AbstractChannel.java:874)
+	at org.eclipse.tcf.core.Command.<init>(Command.java:79)
+	... 6 more
+14:05:11 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:05:13 INFO  : XSDB server has started successfully.
+14:05:14 INFO  : Processing command line option -hwspec /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+14:05:15 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+14:05:18 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1457115914000,  Project:1457109004000
+14:05:18 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+14:05:18 INFO  : Copied contents of /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+14:05:30 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:05:31 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-8ef0d42c0bc34450b4e2d8d99ff30669-rtkit-daemon.service-T2thMT"
+
+14:05:31 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-8ef0d42c0bc34450b4e2d8d99ff30669-colord.service-lGO7La"
+
+14:05:31 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-8ef0d42c0bc34450b4e2d8d99ff30669-systemd-timesyncd.service-al4nvh"
+
+14:05:31 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+14:05:32 ERROR : Error updating BSP project MSS files.
+14:05:33 INFO  : Updating hardware inferred compiler options for fpga_app.
+14:05:33 INFO  : Clearing existing target manager status.
+10:24:11 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:24:15 INFO  : XSDB server has started successfully.
+10:24:15 INFO  : Processing command line option -hwspec /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+10:24:15 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:24:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:24:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:24:52 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:26:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:26:24 INFO  : 'fpga -state' command is executed.
+10:26:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:25 INFO  : Sourcing of '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:26:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:26:25 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:26:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:26:26 INFO  : 'stop' command is executed.
+10:26:26 ERROR : AP transaction error, DAP status f0000021
+10:26:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+10:26:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:26:47 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:26:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:26:56 INFO  : 'fpga -state' command is executed.
+10:26:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:56 INFO  : Sourcing of '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:26:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:26:57 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:26:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:26:58 INFO  : 'stop' command is executed.
+10:27:32 INFO  : 'ps7_init' command is executed.
+10:27:33 INFO  : 'ps7_post_config' command is executed.
+10:27:33 INFO  : 'con' command is executed.
+10:27:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:27:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:36 INFO  : The application '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:27:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf
+----------------End of Script----------------
+
+10:27:36 INFO  : Memory regions updated for context APU
+10:27:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:37 INFO  : 'con' command is executed.
+10:27:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+10:28:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:28:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:28:42 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:29:03 INFO  : Disconnected from the channel tcfchan#1.
+10:29:13 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error while running ps7_init method.
+Cannot Read from target
+
+
+    MMU section translation fault
+
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(TM.java:1089)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:514)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+10:29:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:29:58 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:30:11 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error while running ps7_init method.
+Cannot Read from target
+
+
+    MMU section translation fault
+
+	at com.xilinx.sdk.targetmanager.internal.TM.run_ps7_init(TM.java:1089)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:514)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:616)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+10:30:29 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:44:36 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:44:39 INFO  : XSDB server has started successfully.
+10:44:39 INFO  : Processing command line option -hwspec /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+10:44:40 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:44:43 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1457451785000,  Project:1457115914000
+10:44:43 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf.
+10:44:43 INFO  : Copied contents of /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+10:44:49 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:44:50 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a17a9168338740d2b30cddb5afd0b41d-systemd-timesyncd.service-KMNHVl"
+
+10:44:50 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a17a9168338740d2b30cddb5afd0b41d-rtkit-daemon.service-ryMgL4"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a17a9168338740d2b30cddb5afd0b41d-colord.service-cuDxYU"
+
+10:44:51 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+10:44:51 ERROR : Error updating BSP project MSS files.
+10:44:52 INFO  : Updating hardware inferred compiler options for fpga_app.
+10:44:52 INFO  : Clearing existing target manager status.
+10:45:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:45:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:45:25 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:45:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:45:44 INFO  : 'fpga -state' command is executed.
+10:45:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:45:44 INFO  : Sourcing of '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:45:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:45:45 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:45:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:45:45 INFO  : 'stop' command is executed.
+10:46:19 INFO  : 'ps7_init' command is executed.
+10:46:20 INFO  : 'ps7_post_config' command is executed.
+10:46:20 INFO  : 'con' command is executed.
+10:46:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:46:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:23 INFO  : The application '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:46:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf
+----------------End of Script----------------
+
+10:46:24 INFO  : Memory regions updated for context APU
+10:46:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:25 INFO  : 'con' command is executed.
+10:46:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+10:48:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:48:41 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:48:57 INFO  : Disconnected from the channel tcfchan#1.
+10:48:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+10:48:58 INFO  : 'fpga -state' command is executed.
+10:48:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:58 INFO  : Sourcing of '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:48:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:48:59 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:48:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+10:48:59 INFO  : 'stop' command is executed.
+10:49:33 INFO  : 'ps7_init' command is executed.
+10:49:34 INFO  : 'ps7_post_config' command is executed.
+10:49:34 INFO  : 'con' command is executed.
+10:49:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:49:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:37 INFO  : The application '/home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:49:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/smagill/host/thematrix/fpga_logic/fpga_logic.sdk/fpga_app/Debug/fpga_app.elf
+----------------End of Script----------------
+
+10:49:38 INFO  : Memory regions updated for context APU
+10:49:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:38 INFO  : 'con' command is executed.
+10:49:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+10:50:52 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:50:55 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
