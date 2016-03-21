@@ -4279,3 +4279,91 @@ targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Z
 con
 ----------------End of Script----------------
 
+11:06:04 INFO  : Launching XSDB server: xsdb -n /home/smagill/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:06:06 INFO  : XSDB server has started successfully.
+11:06:07 INFO  : Processing command line option -hwspec /home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper.hdf.
+11:07:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:07:33 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:08:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:08:00 INFO  : 'fpga -state' command is executed.
+11:08:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:08:00 INFO  : Sourcing of '/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:08:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:08:01 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:08:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:08:01 INFO  : 'stop' command is executed.
+11:08:33 INFO  : 'ps7_init' command is executed.
+11:08:33 INFO  : 'ps7_post_config' command is executed.
+11:08:34 INFO  : 'con' command is executed.
+11:08:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:08:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:36 INFO  : The application '/home/smagill/host/thematrix/intro/intro.sdk/intro/Debug/intro.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:08:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/smagill/host/thematrix/intro/intro.sdk/intro/Debug/intro.elf
+----------------End of Script----------------
+
+11:08:37 INFO  : Memory regions updated for context APU
+11:08:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:37 INFO  : 'con' command is executed.
+11:08:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+11:44:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:44:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:44:54 INFO  : FPGA configured successfully with bitstream "/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:45:11 INFO  : Disconnected from the channel tcfchan#1.
+11:45:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+11:45:12 INFO  : 'fpga -state' command is executed.
+11:45:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:45:12 INFO  : Sourcing of '/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:45:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:45:12 INFO  : Hardware design information is loaded from '/home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:45:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+11:45:13 INFO  : 'stop' command is executed.
+11:45:43 INFO  : 'ps7_init' command is executed.
+11:45:43 INFO  : 'ps7_post_config' command is executed.
+11:45:44 INFO  : 'con' command is executed.
+11:45:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:45:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:46 INFO  : The application '/home/smagill/host/thematrix/intro/intro.sdk/intro/Debug/intro.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:45:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/smagill/host/thematrix/intro/intro.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/smagill/host/thematrix/intro/intro.sdk/intro/Debug/intro.elf
+----------------End of Script----------------
+
+11:45:47 INFO  : Memory regions updated for context APU
+11:45:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:47 INFO  : 'con' command is executed.
+11:45:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+

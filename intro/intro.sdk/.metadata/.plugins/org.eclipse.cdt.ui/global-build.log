@@ -6866,3 +6866,17 @@ make: Nothing to be done for 'all'.
 14:29:19 **** Incremental Build of configuration Debug for project intro ****
 make all 
 make: Nothing to be done for 'all'.
+11:05:58 **** Auto Build of configuration Debug for project intro ****
+make all 
+make: Nothing to be done for 'all'.
+11:07:56 **** Incremental Build of configuration Debug for project intro ****
+make all 
+make: Nothing to be done for 'all'.
+11:45:05 **** Incremental Build of configuration Debug for project intro ****
+make all 
+make: Warning: File 'src/subdir.mk' has modification time 2.6 s in the future
+make: Nothing to be done for 'all'.
+make: warning:  Clock skew detected.  Your build may be incomplete.
+13:21:00 **** Incremental Build of configuration Debug for project intro ****
+make all 
+make: Nothing to be done for 'all'.
