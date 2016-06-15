@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Jun 14 18:26:27 2016
+# Process ID: 23550
+# Current directory: /home/russell/leds/thematrix/fpga_test/fpga_test.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/russell/leds/thematrix/fpga_test/fpga_test.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/russell/leds/thematrix/fpga_test/fpga_test.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
