@@ -22,7 +22,7 @@
 module beagle01
 (
 	input	wire			rst_n,				// actie-low async reset (tied to PB0)
-	input	wire			clk50_in,			// 50MHz clock in
+	input	wire			clk100_in,			// 100MHz clock in
 
 //	input	wire			gpmc_clk,			// gpmc bus
 //	input	wire			gpmc_csn,
@@ -80,14 +80,14 @@ assign PMOD_CLK = mtrx_sclk;
 // clock generator
 //
 
-wire clk100, clk50, clk10;
+wire clk100, clk50, clk33;
 
 clk_wiz_0 clk_wiz_0
 (
-	.clk_in1			(clk50_in),
+	.clk_in1			(clk100_in),
 	.clk_out1			(clk100),
 	.clk_out2			(clk50),
-	.clk_out3			(clk10)
+	.clk_out3			(clk33)
 );
 
 
@@ -114,7 +114,7 @@ assign led[0] = counter50[23];
 
 reg [23:0] counter10;
 
-always @ (posedge clk10 or negedge rst_n)
+always @ (posedge clk33 or negedge rst_n)
 begin
 	if (!rst_n)
 	begin
@@ -265,7 +265,7 @@ reg mtrx_select_y;
 wire mtrx_current_yy;
 reg mtrx_current_y;
 
-always @ (posedge clk10 or negedge rst_n)
+always @ (posedge clk33 or negedge rst_n)
 begin
 	if (!rst_n)
 	begin
@@ -296,7 +296,7 @@ end
 matrix matrix
 (
     .rst_n					(rst_n),
-    .clk					(clk10),
+    .clk					(clk33),
 
     .wr_clk					(clk100),
     .wr						(mtrx_wr),

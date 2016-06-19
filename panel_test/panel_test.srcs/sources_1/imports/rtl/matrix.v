@@ -71,7 +71,7 @@ reg rd_buffer;
 reg [3:0] rd_row;
 reg [1:0] rd_bit;
 reg [6:0] rd_col;
-wire [9:0] rd_addr;
+wire [10:0] rd_addr;
 wire [23:0] rd_data;
 wire [3:0] rd_r1, rd_g1, rd_b1, rd_r0, rd_g0, rd_b0;
 wire rd_r1_bit, rd_g1_bit, rd_b1_bit, rd_r0_bit, rd_g0_bit, rd_b0_bit;
@@ -112,17 +112,32 @@ assign wr_lo = wr && !wr_addr[9];
 //	.doutb					(rd_data[11:0])
 //);
 
-localparam RED  = 24'b0000_0000_1111_1111_0000_0000;
-localparam BLUE = 24'b0000_0000_1111_0000_0000_1111;
-localparam GRADIENTH = 8'b0111_0111;
-localparam GRADIENTL = 8'b0000_0000;
+bram_top bram_top
+(
+	.clka					(clk),
+	.addra					(rd_addr),
+	.douta					(rd_data[11:0])
+);
+
+bram_bottom bram_bottom
+(
+	.clka					(clk),
+	.addra					(rd_addr),
+	.douta					(rd_data[23:12])
+);
+
+//localparam RED  = 24'b0000_0000_1111_1111_0000_0000;
+//localparam BLUE = 24'b0000_0000_1111_0000_0000_1111;
+//localparam GRADIENTH = 8'b0111_0111;
+//localparam GRADIENTL = 8'b0000_0000;
 
 //assign rd_data = (rd_col == 0 && rd_row == 0) ? RED : BLUE;
-assign rd_data = {GRADIENTH, rd_col[6:3], GRADIENTL, rd_col[6:3]};
+//assign rd_data = {GRADIENTH, rd_col[5:2], GRADIENTL, rd_col[5:2]};
 
 // turn current buffer, row, column, and bit number into a memory address
 assign buffer_current = rd_buffer;
-assign rd_addr = { rd_buffer, rd_row[3:0], rd_col[4:0] };
+//assign rd_addr = { rd_buffer, rd_row[3:0], rd_col[4:0] };
+assign rd_addr = {rd_row[3:0], rd_col[6:0]};
 
 // turn read data into individual pixel bits
 assign rd_r1 = rd_data[23:20];
@@ -175,13 +190,14 @@ begin
 		// implemnt timer for binary coded modulation
 		// bit plane 0 is displayed for ~192 clock cycles
 		// each succesfive bit plane is displayed for 2x the clocks of the previous bit plane
+		// Timer delay must be longer than the total state machine - approx. (cols*3 + 18)
 		if (timer == 0)
 		begin
 			case (rd_bit)
-				0: timer <= 95;
-				1: timer <= 287;
-				2: timer <= 863;
-				3: timer <= 2591;
+				0: timer <= 450;
+				1: timer <= 900;
+				2: timer <= 1800;
+				3: timer <= 3600;
 			endcase
 		end
 		else
