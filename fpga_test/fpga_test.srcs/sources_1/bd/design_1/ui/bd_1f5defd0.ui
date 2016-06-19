@@ -37,7 +37,7 @@ preplace netloc panel_test_0_PMOD_B1 1 2 1 NJ
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 280 430
 preplace netloc panel_test_0_PMOD_LATCH 1 2 1 NJ
 preplace netloc panel_test_0_led 1 2 1 NJ
-levelinfo -pg 1 0 220 530 650 -top 0 -bot 430
+levelinfo -pg 1 0 220 540 670 -top 0 -bot 430
 ",
 }
 {

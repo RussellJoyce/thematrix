@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Jun 14 18:26:27 2016">
+<application name="pa" timeStamp="Sun Jun 19 17:10:03 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="7126e707dbe34ce2928ffe6334a01871" type="ProjectID"/>
-<property name="ProjectIteration" value="11" type="ProjectIteration"/>
+<property name="ProjectIteration" value="12" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -22,28 +22,28 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AutoConnectTarget" value="1" type="JavaHandler"/>
 <property name="CoreView" value="2" type="JavaHandler"/>
 <property name="CreateTopHDL" value="2" type="JavaHandler"/>
-<property name="CustomizeRSBBlock" value="2" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="3" type="JavaHandler"/>
 <property name="EditDelete" value="3" type="JavaHandler"/>
 <property name="EditRedo" value="2" type="JavaHandler"/>
 <property name="FileExit" value="1" type="JavaHandler"/>
 <property name="FlipToViewTaskSynthesis" value="1" type="JavaHandler"/>
-<property name="IPPackagerHandler" value="6" type="JavaHandler"/>
+<property name="IPPackagerHandler" value="8" type="JavaHandler"/>
 <property name="LaunchProgramFpga" value="5" type="JavaHandler"/>
 <property name="NewExportHardware" value="2" type="JavaHandler"/>
 <property name="NewLaunchHardware" value="2" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="3" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="4" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="6" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="4" type="JavaHandler"/>
 <property name="RecustomizeCore" value="1" type="JavaHandler"/>
-<property name="RegenerateRSBLayout" value="4" type="JavaHandler"/>
-<property name="ReportIPStatus" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="11" type="JavaHandler"/>
+<property name="RegenerateRSBLayout" value="5" type="JavaHandler"/>
+<property name="ReportIPStatus" value="2" type="JavaHandler"/>
+<property name="RunBitgen" value="13" type="JavaHandler"/>
 <property name="RunSynthesis" value="2" type="JavaHandler"/>
 <property name="SaveDesign" value="2" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="6" type="JavaHandler"/>
-<property name="SaveRSBDesign" value="6" type="JavaHandler"/>
+<property name="SaveRSBDesign" value="9" type="JavaHandler"/>
 <property name="ShowView" value="1" type="JavaHandler"/>
-<property name="UpgradeIP" value="8" type="JavaHandler"/>
+<property name="UpgradeIP" value="9" type="JavaHandler"/>
 <property name="ValidateRSBDesign" value="2" type="JavaHandler"/>
 <property name="ViewLayoutCmd" value="1" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="7" type="JavaHandler"/>

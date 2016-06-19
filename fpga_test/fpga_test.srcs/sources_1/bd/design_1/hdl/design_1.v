@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-//Date        : Tue Jun 14 18:26:23 2016
+//Date        : Sun Jun 19 17:09:20 2016
 //Host        : ubuntu running 64-bit Ubuntu 16.04 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -148,7 +148,7 @@ module design_1
         .PMOD_LATCH(panel_test_0_PMOD_LATCH),
         .PMOD_R0(panel_test_0_PMOD_R0),
         .PMOD_R1(panel_test_0_PMOD_R1),
-        .clk50_in(processing_system7_0_FCLK_CLK0),
+        .clk100_in(processing_system7_0_FCLK_CLK0),
         .led(panel_test_0_led),
         .rst_n(processing_system7_0_FCLK_RESET0_N));
   design_1_processing_system7_0_0 processing_system7_0

@@ -1,7 +1,7 @@
 set_property SRC_FILE_INFO {cfile:/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc rfile:../../../fpga_test.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/constrs_1/new/constraints.xdc rfile:../../../fpga_test.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.6
+set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "C11" [get_ports "MIO[53]"]
 set_property src_info {type:SCOPED_XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]

@@ -15,6 +15,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_panel_
 # IP: bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0}]
 
+# IP: bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_top/bram_top.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_top || ORIG_REF_NAME==bram_top}]
+
+# IP: bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_bottom/bram_bottom.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_bottom || ORIG_REF_NAME==bram_bottom}]
+
 # XDC: bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0}] {/inst }]/inst ]]
 
@@ -25,5 +31,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0}] {/inst }]/inst ]]
 
 # XDC: bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
+
+# XDC: bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_top/bram_top_ooc.xdc
+
+# XDC: bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_bottom/bram_bottom_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc

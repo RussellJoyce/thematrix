@@ -48,14 +48,14 @@
 
 
 // IP VLNV: galois.com:galois:panel_test:1.0
-// IP Revision: 11
+// IP Revision: 12
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_panel_test_0_0 (
   rst_n,
-  clk50_in,
+  clk100_in,
   led,
   PMOD_R0,
   PMOD_G0,
@@ -73,7 +73,7 @@ module design_1_panel_test_0_0 (
 );
 
 input wire rst_n;
-input wire clk50_in;
+input wire clk100_in;
 output wire [1 : 0] led;
 output wire PMOD_R0;
 output wire PMOD_G0;
@@ -91,7 +91,7 @@ output wire PMOD_CLK;
 
   beagle01 inst (
     .rst_n(rst_n),
-    .clk50_in(clk50_in),
+    .clk100_in(clk100_in),
     .led(led),
     .PMOD_R0(PMOD_R0),
     .PMOD_G0(PMOD_G0),
