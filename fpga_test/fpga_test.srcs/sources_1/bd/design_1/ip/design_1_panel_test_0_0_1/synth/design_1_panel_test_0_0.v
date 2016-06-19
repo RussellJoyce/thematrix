@@ -48,7 +48,7 @@
 
 
 // IP VLNV: galois.com:galois:panel_test:1.0
-// IP Revision: 12
+// IP Revision: 15
 
 (* X_CORE_INFO = "beagle01,Vivado 2016.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_panel_test_0_0,beagle01,{}" *)
@@ -57,6 +57,10 @@ module design_1_panel_test_0_0 (
   rst_n,
   clk100_in,
   led,
+  wen,
+  waddr,
+  wdata,
+  wclk,
   PMOD_R0,
   PMOD_G0,
   PMOD_B0,
@@ -75,6 +79,10 @@ module design_1_panel_test_0_0 (
 input wire rst_n;
 input wire clk100_in;
 output wire [1 : 0] led;
+input wire wen;
+input wire [11 : 0] waddr;
+input wire [11 : 0] wdata;
+input wire wclk;
 output wire PMOD_R0;
 output wire PMOD_G0;
 output wire PMOD_B0;
@@ -93,6 +101,10 @@ output wire PMOD_CLK;
     .rst_n(rst_n),
     .clk100_in(clk100_in),
     .led(led),
+    .wen(wen),
+    .waddr(waddr),
+    .wdata(wdata),
+    .wclk(wclk),
     .PMOD_R0(PMOD_R0),
     .PMOD_G0(PMOD_G0),
     .PMOD_B0(PMOD_B0),

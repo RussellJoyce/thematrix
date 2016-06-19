@@ -17,7 +17,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_repo_paths /home/russell/leds/thematrix/panel_test/panel_test.srcs/sources_1 [current_project]
+set_property ip_repo_paths {
+  /home/russell/leds/thematrix/panel_axi_1.0
+  /home/russell/leds/thematrix/panel_test/panel_test.srcs/sources_1
+} [current_project]
 add_files /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/gradient-top.coe
 add_files /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/gradient-bottom.coe
 add_files /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/design_1.bd
@@ -27,6 +30,10 @@ set_property used_in_implementation false [get_files -all /home/russell/leds/the
 set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_top/bram_top_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/bram_bottom/bram_bottom_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property is_locked true [get_files /home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/design_1.bd]
 

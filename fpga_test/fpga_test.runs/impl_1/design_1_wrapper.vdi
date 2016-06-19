@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sun Jun 19 17:12:05 2016
-# Process ID: 73261
+# Start of session at: Sun Jun 19 18:55:47 2016
+# Process ID: 81963
 # Current directory: /home/russell/leds/thematrix/fpga_test/fpga_test.runs/impl_1
 # Command line: vivado -log design_1_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: /home/russell/leds/thematrix/fpga_test/fpga_test.runs/impl_1/design_1_wrapper.vdi
@@ -20,7 +20,7 @@ WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys4_ddr:part0:1.
 WARNING: [Board 49-26] cannot add Board Part digilentinc.com:nexys_video:part0:1.1 available at /opt/Xilinx/Vivado/2016.2/data/boards/board_files/nexys_video/A.0/board.xml as part xc7a200tsbg484-1 specified in board_part file is either invalid or not available
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.2
 INFO: [Device 21-403] Loading part xc7z010clg400-1
@@ -29,6 +29,10 @@ Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_
 Finished Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
 Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'design_1_i/panel_test_0/inst/clk_wiz_0/inst'
 Finished Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'design_1_i/panel_test_0/inst/clk_wiz_0/inst'
+Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc] for cell 'design_1_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc] for cell 'design_1_i/rst_processing_system7_0_100M/U0'
+Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc] for cell 'design_1_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc] for cell 'design_1_i/rst_processing_system7_0_100M/U0'
 Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/constrs_1/new/constraints.xdc]
 Finished Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/constrs_1/new/constraints.xdc]
 Parsing XDC File [/home/russell/leds/thematrix/fpga_test/fpga_test.srcs/sources_1/bd/design_1/ip/design_1_panel_test_0_0_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'design_1_i/panel_test_0/inst/clk_wiz_0/inst'
@@ -37,7 +41,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1244.395 ; gain = 284.758 ; free physical = 2179 ; free virtual = 8549
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1248.391 ; gain = 288.758 ; free physical = 1032 ; free virtual = 7551
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -48,40 +52,40 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1276.410 ; gain = 32.016 ; free physical = 2176 ; free virtual = 8547
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1280.406 ; gain = 32.016 ; free physical = 1029 ; free virtual = 7548
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: 16c6ac296
+Implement Debug Cores | Checksum: 12f90a237
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 18f18fc7c
+Phase 1 Retarget | Checksum: 186e313d1
 
-Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1613.902 ; gain = 1.000 ; free physical = 1844 ; free virtual = 8215
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1659.898 ; gain = 0.000 ; free physical = 693 ; free virtual = 7212
 
 Phase 2 Constant Propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 3 cells.
-Phase 2 Constant Propagation | Checksum: d2f69a40
+INFO: [Opt 31-10] Eliminated 15 cells.
+Phase 2 Constant Propagation | Checksum: 16e139958
 
-Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1613.902 ; gain = 1.000 ; free physical = 1844 ; free virtual = 8215
+Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.33 . Memory (MB): peak = 1659.898 ; gain = 0.000 ; free physical = 693 ; free virtual = 7212
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 80 unconnected nets.
-INFO: [Opt 31-11] Eliminated 93 unconnected cells.
-Phase 3 Sweep | Checksum: e87eeaab
+INFO: [Opt 31-12] Eliminated 310 unconnected nets.
+INFO: [Opt 31-11] Eliminated 318 unconnected cells.
+Phase 3 Sweep | Checksum: e1c3cfa9
 
-Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 1613.902 ; gain = 1.000 ; free physical = 1844 ; free virtual = 8215
+Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.65 . Memory (MB): peak = 1659.898 ; gain = 0.000 ; free physical = 693 ; free virtual = 7212
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1613.902 ; gain = 0.000 ; free physical = 1844 ; free virtual = 8215
-Ending Logic Optimization Task | Checksum: e87eeaab
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1659.898 ; gain = 0.000 ; free physical = 693 ; free virtual = 7212
+Ending Logic Optimization Task | Checksum: e1c3cfa9
 
-Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 1613.902 ; gain = 1.000 ; free physical = 1844 ; free virtual = 8215
+Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.66 . Memory (MB): peak = 1659.898 ; gain = 0.000 ; free physical = 693 ; free virtual = 7212
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -96,24 +100,22 @@ Finished Running Vector-less Activity Propagation
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 4 Total Ports: 4
-Number of Flops added for Enable Generation: 2
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: dfca440e
 
-Ending PowerOpt Patch Enables Task | Checksum: 15aef3b52
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 675 ; free virtual = 7195
+Ending Power Optimization Task | Checksum: dfca440e
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1794 ; free virtual = 8164
-Ending Power Optimization Task | Checksum: 15aef3b52
-
-Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.49 . Memory (MB): peak = 1819.996 ; gain = 206.094 ; free physical = 1794 ; free virtual = 8164
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.56 . Memory (MB): peak = 1864.938 ; gain = 205.039 ; free physical = 675 ; free virtual = 7195
 INFO: [Common 17-83] Releasing license: Implementation
 26 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 575.602 ; free physical = 1794 ; free virtual = 8164
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 616.547 ; free physical = 675 ; free virtual = 7195
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1791 ; free virtual = 8163
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7195
 INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/russell/leds/thematrix/fpga_test/fpga_test.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 INFO: [Chipscope 16-241] No debug cores found in the current design.
@@ -127,28 +129,28 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 4 threads
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 22 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
@@ -156,10 +158,10 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1788 ; free virtual = 8159
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1788 ; free virtual = 8159
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 
@@ -168,12 +170,12 @@ Phase 1.1.1 ParallelPlaceIOClockAndInitTop
 Phase 1.1.1.1 Pre-Place Cells
 Phase 1.1.1.1 Pre-Place Cells | Checksum: 5000f8c9
 
-Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1788 ; free virtual = 8159
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.1.1.2 Constructing HAPIClkRuleMgr
 Phase 1.1.1.2 Constructing HAPIClkRuleMgr | Checksum: 5000f8c9
 
-Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.49 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.57 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 WARNING: [Place 30-879] Found overlapping PBlocks. The use of overlapping PBlocks is not recommended as it may lead to legalization errors or unplaced instances.
 WARNING: [Place 30-12] An IO Bus FIXED_IO_mio with more than one IO standard is found. Components associated with this bus are: 
 	FIXED_IO_mio[53] of IOStandard LVCMOS18
@@ -237,114 +239,114 @@ Phase 1.1.1.3 IO and Clk Clean Up
 Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr
 Phase 1.1.1.3.1 Constructing HAPIClkRuleMgr | Checksum: 5000f8c9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 Phase 1.1.1.3 IO and Clk Clean Up | Checksum: 5000f8c9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.1.1.4 Implementation Feasibility check On IDelay
 Phase 1.1.1.4 Implementation Feasibility check On IDelay | Checksum: 5000f8c9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.1.1.5 Commit IO Placement
 Phase 1.1.1.5 Commit IO Placement | Checksum: e3ed803e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 Phase 1.1.1 ParallelPlaceIOClockAndInitTop | Checksum: e3ed803e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11d4f82a1
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1063d3fc5
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8159
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.2 Build Placer Netlist Model
 
 Phase 1.2.1 Place Init Design
 
 Phase 1.2.1.1 Make Others
-Phase 1.2.1.1 Make Others | Checksum: 1422f1215
+Phase 1.2.1.1 Make Others | Checksum: 1bc3c170b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
 
 Phase 1.2.1.2 Init Lut Pin Assignment
-Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 1422f1215
+Phase 1.2.1.2 Init Lut Pin Assignment | Checksum: 1bc3c170b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 1.2.1 Place Init Design | Checksum: 20b08eafa
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 673 ; free virtual = 7193
+Phase 1.2.1 Place Init Design | Checksum: 1c6f49d6d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 1.2 Build Placer Netlist Model | Checksum: 20b08eafa
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 665 ; free virtual = 7185
+Phase 1.2 Build Placer Netlist Model | Checksum: 1c6f49d6d
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 665 ; free virtual = 7185
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: 20b08eafa
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1c6f49d6d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 1 Placer Initialization | Checksum: 20b08eafa
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 665 ; free virtual = 7185
+Phase 1 Placer Initialization | Checksum: 1c6f49d6d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 665 ; free virtual = 7185
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 187df79ca
+Phase 2 Global Placement | Checksum: 1584ccbf3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7184
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 187df79ca
+Phase 3.1 Commit Multi Column Macros | Checksum: 1584ccbf3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7184
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19fdc4066
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 18438ccfb
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 16d316988
+Phase 3.3 Area Swap Optimization | Checksum: 2123106f3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.4 updateClock Trees: DP
-Phase 3.4 updateClock Trees: DP | Checksum: 16d316988
+Phase 3.4 updateClock Trees: DP | Checksum: 2123106f3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: d3e23823
+Phase 3.5 Timing Path Optimizer | Checksum: 19618a6ca
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8157
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: d3e23823
+Phase 3.6 Fast Optimization | Checksum: 19618a6ca
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8157
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: 10d28a206
+Phase 3.7 Small Shape Detail Placement | Checksum: 1a73be3f0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 1adaa468a
+Phase 3.8 Re-assign LUT pins | Checksum: 2113f8743
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 1adaa468a
+Phase 3.9 Pipeline Register Optimization | Checksum: 2113f8743
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 1adaa468a
+Phase 3.10 Fast Optimization | Checksum: 2113f8743
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 3 Detail Placement | Checksum: 1adaa468a
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
+Phase 3 Detail Placement | Checksum: 2113f8743
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -352,49 +354,49 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 updateClock Trees: PCOPT
-Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 1947d29fc
+Phase 4.1.1 updateClock Trees: PCOPT | Checksum: 1dec5875d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.1.2 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=17.678. For the most accurate timing information please run report_timing.
-Phase 4.1.2 Post Placement Optimization | Checksum: 18356ce43
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.421. For the most accurate timing information please run report_timing.
+Phase 4.1.2 Post Placement Optimization | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 4.1 Post Commit Optimization | Checksum: 18356ce43
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
+Phase 4.1 Post Commit Optimization | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.2 Sweep Clock Roots: Post-Placement
-Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 18356ce43
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.3 Uram Pipeline Register Optimization
-Phase 4.3 Uram Pipeline Register Optimization | Checksum: 18356ce43
+Phase 4.3 Uram Pipeline Register Optimization | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.4 Post Placement Cleanup
-Phase 4.4 Post Placement Cleanup | Checksum: 18356ce43
+Phase 4.4 Post Placement Cleanup | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.5 Placer Reporting
-Phase 4.5 Placer Reporting | Checksum: 18356ce43
+Phase 4.5 Placer Reporting | Checksum: 2619ee11a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 
 Phase 4.6 Final Placement Cleanup
-Phase 4.6 Final Placement Cleanup | Checksum: 1e0a9a18c
+Phase 4.6 Final Placement Cleanup | Checksum: 2b41c2f6f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1e0a9a18c
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2b41c2f6f
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
-Ending Placer Task | Checksum: 16e7facfb
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
+Ending Placer Task | Checksum: 1c3a3982b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1787 ; free virtual = 8158
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 663 ; free virtual = 7183
 INFO: [Common 17-83] Releasing license: Implementation
 43 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
@@ -402,125 +404,139 @@ Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1785 ; free virtual = 8158
-report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8158
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1786 ; free virtual = 8157
-report_control_sets: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1785 ; free virtual = 8157
+Write XDEF Complete: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 660 ; free virtual = 7184
+report_io: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 662 ; free virtual = 7183
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 662 ; free virtual = 7183
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 662 ; free virtual = 7183
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 4 threads
-WARNING: [DRC 23-20] Rule violation (PLIO-7) Placement Constraints Check for IO constraints - An IO Bus FIXED_IO_mio[53:0] with more than one IO standard is found. Components associated with this bus are: LVCMOS18 (FIXED_IO_mio[53], FIXED_IO_mio[52], FIXED_IO_mio[51], FIXED_IO_mio[50], FIXED_IO_mio[49], FIXED_IO_mio[48], FIXED_IO_mio[47], FIXED_IO_mio[46], FIXED_IO_mio[45], FIXED_IO_mio[44], FIXED_IO_mio[43], FIXED_IO_mio[42], FIXED_IO_mio[41], FIXED_IO_mio[40], FIXED_IO_mio[39] (the first 15 of 26 listed)); LVCMOS33 (FIXED_IO_mio[15], FIXED_IO_mio[14], FIXED_IO_mio[13], FIXED_IO_mio[12], FIXED_IO_mio[11], FIXED_IO_mio[10], FIXED_IO_mio[9], FIXED_IO_mio[8], FIXED_IO_mio[7], FIXED_IO_mio[6], FIXED_IO_mio[5], FIXED_IO_mio[4], FIXED_IO_mio[3], FIXED_IO_mio[2], FIXED_IO_mio[1] (the first 15 of 16 listed)); HSTL_I_18 (FIXED_IO_mio[27], FIXED_IO_mio[26], FIXED_IO_mio[25], FIXED_IO_mio[24], FIXED_IO_mio[23], FIXED_IO_mio[22], FIXED_IO_mio[21], FIXED_IO_mio[20], FIXED_IO_mio[19], FIXED_IO_mio[18], FIXED_IO_mio[17], FIXED_IO_mio[16]); 
+WARNING: [DRC 23-20] Rule violation (PLIO-7) Placement Constraints Check for IO constraints - An IO Bus FIXED_IO_mio[53:0] with more than one IO standard is found. Components associated with this bus are: HSTL_I_18 (FIXED_IO_mio[27], FIXED_IO_mio[26], FIXED_IO_mio[25], FIXED_IO_mio[24], FIXED_IO_mio[23], FIXED_IO_mio[22], FIXED_IO_mio[21], FIXED_IO_mio[20], FIXED_IO_mio[19], FIXED_IO_mio[18], FIXED_IO_mio[17], FIXED_IO_mio[16]); LVCMOS18 (FIXED_IO_mio[53], FIXED_IO_mio[52], FIXED_IO_mio[51], FIXED_IO_mio[50], FIXED_IO_mio[49], FIXED_IO_mio[48], FIXED_IO_mio[47], FIXED_IO_mio[46], FIXED_IO_mio[45], FIXED_IO_mio[44], FIXED_IO_mio[43], FIXED_IO_mio[42], FIXED_IO_mio[41], FIXED_IO_mio[40], FIXED_IO_mio[39] (the first 15 of 26 listed)); LVCMOS33 (FIXED_IO_mio[15], FIXED_IO_mio[14], FIXED_IO_mio[13], FIXED_IO_mio[12], FIXED_IO_mio[11], FIXED_IO_mio[10], FIXED_IO_mio[9], FIXED_IO_mio[8], FIXED_IO_mio[7], FIXED_IO_mio[6], FIXED_IO_mio[5], FIXED_IO_mio[4], FIXED_IO_mio[3], FIXED_IO_mio[2], FIXED_IO_mio[1] (the first 15 of 16 listed)); 
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
-Checksum: PlaceDB: b5a0e050 ConstDB: 0 ShapeSum: b8deccab RouteDB: 0
+Checksum: PlaceDB: edffc6f2 ConstDB: 0 ShapeSum: d5a3d139 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 11351de0a
+Phase 1 Build RT Design | Checksum: 101f22131
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1764 ; free virtual = 8136
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 602 ; free virtual = 7123
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 11351de0a
+Phase 2.1 Create Timer | Checksum: 101f22131
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1764 ; free virtual = 8136
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 602 ; free virtual = 7123
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 11351de0a
+Phase 2.2 Fix Topology Constraints | Checksum: 101f22131
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1750 ; free virtual = 8122
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 591 ; free virtual = 7112
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 11351de0a
+Phase 2.3 Pre Route Cleanup | Checksum: 101f22131
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1750 ; free virtual = 8122
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 591 ; free virtual = 7112
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 16cc47a18
+Phase 2.4 Update Timing | Checksum: 14b759197
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=17.526 | TNS=0.000  | WHS=-0.193 | THS=-2.754 |
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.353  | TNS=0.000  | WHS=-0.241 | THS=-18.229|
 
-Phase 2 Router Initialization | Checksum: e1ee28cb
+Phase 2 Router Initialization | Checksum: 1eaed463b
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 2515c8312
+Phase 3 Initial Routing | Checksum: 1fdca3850
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 103
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 2309758b2
+Phase 4.1.1 Update Timing | Checksum: 1f43bd5b7
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=17.388 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.291  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1ed2fe5aa
+Phase 4.1 Global Iteration 0 | Checksum: 26a6bdba2
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-Phase 4 Rip-up And Reroute | Checksum: 1ed2fe5aa
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.2.1 Update Timing
+Phase 4.2.1 Update Timing | Checksum: 1f29be479
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.291  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 13588042a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+Phase 4 Rip-up And Reroute | Checksum: 13588042a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 27648a932
+Phase 5.1.1 Update Timing | Checksum: 1dfdba7b6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=17.540 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.440  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 27648a932
+Phase 5.1 Delay CleanUp | Checksum: 1dfdba7b6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 27648a932
+Phase 5.2 Clock Skew Optimization | Checksum: 1dfdba7b6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-Phase 5 Delay and Skew Optimization | Checksum: 27648a932
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+Phase 5 Delay and Skew Optimization | Checksum: 1dfdba7b6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 293b8bf63
+Phase 6.1.1 Update Timing | Checksum: 144567161
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=17.540 | TNS=0.000  | WHS=0.103  | THS=0.000  |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.440  | TNS=0.000  | WHS=0.015  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 293b8bf63
+Phase 6.1 Hold Fix Iter | Checksum: 1527c723e
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
-Phase 6 Post Hold Fix | Checksum: 293b8bf63
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
+Phase 6 Post Hold Fix | Checksum: 1527c723e
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0556025 %
-  Global Horizontal Routing Utilization  = 0.0650276 %
+  Global Vertical Routing Utilization    = 0.451717 %
+  Global Horizontal Routing Utilization  = 0.665441 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -529,43 +545,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 2366c06e2
+Phase 7 Route finalize | Checksum: 18b3897a6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1744 ; free virtual = 8116
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 581 ; free virtual = 7102
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 2366c06e2
+Phase 8 Verifying routed nets | Checksum: 18b3897a6
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1742 ; free virtual = 8114
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 579 ; free virtual = 7100
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 17260b1f2
+Phase 9 Depositing Routes | Checksum: 1152e7603
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1742 ; free virtual = 8114
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 579 ; free virtual = 7100
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=17.540 | TNS=0.000  | WHS=0.103  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=4.440  | TNS=0.000  | WHS=0.015  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 17260b1f2
+Phase 10 Post Router Timing | Checksum: 1152e7603
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1742 ; free virtual = 8114
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 579 ; free virtual = 7100
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1742 ; free virtual = 8114
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 579 ; free virtual = 7100
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-56 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1742 ; free virtual = 8114
+route_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 579 ; free virtual = 7100
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1819.996 ; gain = 0.000 ; free physical = 1739 ; free virtual = 8113
+Write XDEF Complete: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1864.938 ; gain = 0.000 ; free physical = 575 ; free virtual = 7100
 INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/russell/leds/thematrix/fpga_test/fpga_test.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -577,28 +593,28 @@ Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
 Running DRC as a precondition to command write_bitstream
 INFO: [DRC 23-27] Running DRC with 4 threads
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_bottom/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[6]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[7]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[12] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[8]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[13] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[9]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[10]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_row_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[4] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[0]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[5] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[1]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[6] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[2]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[7] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[3]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[8] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[4]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[9] (net: design_1_i/panel_test_0/inst/matrix/bram_top/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[5]) which is driven by a register (design_1_i/panel_test_0/inst/matrix/rd_col_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 22 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
@@ -611,5 +627,5 @@ Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2090.996 ; gain = 271.000 ; free physical = 1396 ; free virtual = 7771
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 19 17:12:47 2016...
+write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.852 ; gain = 260.914 ; free physical = 228 ; free virtual = 6754
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 19 18:56:36 2016...

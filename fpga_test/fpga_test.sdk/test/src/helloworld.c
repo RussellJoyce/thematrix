@@ -48,6 +48,9 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "sleep.h"
+
+
 
 
 int main()
@@ -55,6 +58,15 @@ int main()
     init_platform();
 
 //    print("Hello World\n\r");
+
+	sleep(1);
+
+    int i;
+    for (i = 0; i < 4096; i++) {
+    	*(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + i) = 0x000;
+    }
+
+    *(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + 1) = 0xFFF;
 
     cleanup_platform();
     return 0;

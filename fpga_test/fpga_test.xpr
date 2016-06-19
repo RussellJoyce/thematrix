@@ -19,6 +19,7 @@
     <Option Name="BoardPart" Val="digilentinc.com:zybo:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../panel_axi_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../panel_test/panel_test.srcs/sources_1"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="XPMLibraries" Val="XPM_CDC"/>
@@ -54,8 +55,12 @@
         </FileInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_panel_test_0_0_1/design_1_panel_test_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_panel_axi_0_0/design_1_panel_axi_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_axi_periph_0/design_1_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_pc_0/design_1_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>

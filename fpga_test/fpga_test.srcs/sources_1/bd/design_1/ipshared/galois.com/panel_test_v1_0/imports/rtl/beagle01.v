@@ -35,6 +35,11 @@ module beagle01
 //	input	wire			pushbutton,			// user interface (tied to PB1)
 //	input	wire	[1:0]	switch,
 	output	wire	[1:0]	led,
+	
+	input wire wen,
+	input wire [11:0] waddr,
+	input wire [11:0] wdata,
+	input wire wclk,
 
     output wire PMOD_R0,
     output wire PMOD_G0,
@@ -298,10 +303,10 @@ matrix matrix
     .rst_n					(rst_n),
     .clk					(clk33),
 
-    .wr_clk					(clk100),
-    .wr						(mtrx_wr),
-    .wr_addr				(mtrx_wr_addr),
-    .wr_data				(mtrx_wr_data),
+    .wr_clk					(wclk),
+    .wr						(wen),
+    .wr_addr				(waddr),
+    .wr_data				(wdata),
 
     .buffer_select			(mtrx_select),
     .buffer_current			(mtrx_current_yy),

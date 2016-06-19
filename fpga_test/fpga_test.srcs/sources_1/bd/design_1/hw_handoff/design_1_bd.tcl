@@ -173,6 +173,9 @@ proc create_root_design { parentCell } {
   set PMOD_R1 [ create_bd_port -dir O PMOD_R1 ]
   set led [ create_bd_port -dir O -from 1 -to 0 led ]
 
+  # Create instance: panel_axi_0, and set properties
+  set panel_axi_0 [ create_bd_cell -type ip -vlnv user.org:user:panel_axi:1.0 panel_axi_0 ]
+
   # Create instance: panel_test_0, and set properties
   set panel_test_0 [ create_bd_cell -type ip -vlnv galois.com:galois:panel_test:1.0 panel_test_0 ]
 
@@ -1334,11 +1337,26 @@ CONFIG.PCW_WDT_PERIPHERAL_FREQMHZ.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
  ] $processing_system7_0
 
+  # Create instance: processing_system7_0_axi_periph, and set properties
+  set processing_system7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 processing_system7_0_axi_periph ]
+  set_property -dict [ list \
+CONFIG.NUM_MI {1} \
+ ] $processing_system7_0_axi_periph
+
+  # Create instance: rst_processing_system7_0_100M, and set properties
+  set rst_processing_system7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_processing_system7_0_100M ]
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
+  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI]
+  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins panel_axi_0/S00_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
 
   # Create port connections
+  connect_bd_net -net panel_axi_0_waddr [get_bd_pins panel_axi_0/waddr] [get_bd_pins panel_test_0/waddr]
+  connect_bd_net -net panel_axi_0_wclk [get_bd_pins panel_axi_0/wclk] [get_bd_pins panel_test_0/wclk]
+  connect_bd_net -net panel_axi_0_wdata [get_bd_pins panel_axi_0/wdata] [get_bd_pins panel_test_0/wdata]
+  connect_bd_net -net panel_axi_0_wen [get_bd_pins panel_axi_0/wen] [get_bd_pins panel_test_0/wen]
   connect_bd_net -net panel_test_0_PMOD_A0 [get_bd_ports PMOD_A0] [get_bd_pins panel_test_0/PMOD_A0]
   connect_bd_net -net panel_test_0_PMOD_A1 [get_bd_ports PMOD_A1] [get_bd_pins panel_test_0/PMOD_A1]
   connect_bd_net -net panel_test_0_PMOD_A2 [get_bd_ports PMOD_A2] [get_bd_pins panel_test_0/PMOD_A2]
@@ -1353,10 +1371,13 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
   connect_bd_net -net panel_test_0_PMOD_R0 [get_bd_ports PMOD_R0] [get_bd_pins panel_test_0/PMOD_R0]
   connect_bd_net -net panel_test_0_PMOD_R1 [get_bd_ports PMOD_R1] [get_bd_pins panel_test_0/PMOD_R1]
   connect_bd_net -net panel_test_0_led [get_bd_ports led] [get_bd_pins panel_test_0/led]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins panel_test_0/clk100_in] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins panel_test_0/rst_n] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins panel_axi_0/s00_axi_aclk] [get_bd_pins panel_test_0/clk100_in] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins panel_test_0/rst_n] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
+  connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins panel_axi_0/s00_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
 
   # Create address segments
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs panel_axi_0/S00_AXI/S00_AXI_reg] SEG_panel_axi_0_S00_AXI_reg
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
@@ -1378,27 +1399,38 @@ preplace port PMOD_BLANK -pg 1 -y 340 -defaultsOSRD
 preplace port PMOD_A3 -pg 1 -y 320 -defaultsOSRD
 preplace port PMOD_R1 -pg 1 -y 200 -defaultsOSRD
 preplace portBus led -pg 1 -y 120 -defaultsOSRD
-preplace inst panel_test_0 -pg 1 -lvl 2 -y 250 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 370 -defaultsOSRD
+preplace inst panel_axi_0 -pg 1 -lvl 3 -y 270 -defaultsOSRD
+preplace inst panel_test_0 -pg 1 -lvl 4 -y 250 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 250 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 140 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 2 NJ 50 NJ
-preplace netloc panel_test_0_PMOD_G0 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_G1 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_R0 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_R1 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_A0 1 2 1 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 420
-preplace netloc panel_test_0_PMOD_BLANK 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_A1 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_CLK 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_A2 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_A3 1 2 1 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 70 NJ
-preplace netloc panel_test_0_PMOD_B0 1 2 1 NJ
-preplace netloc panel_test_0_PMOD_B1 1 2 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 280 430
-preplace netloc panel_test_0_PMOD_LATCH 1 2 1 NJ
-preplace netloc panel_test_0_led 1 2 1 NJ
-levelinfo -pg 1 0 220 540 670 -top 0 -bot 430
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 50 NJ 50 NJ 50 NJ
+preplace netloc panel_axi_0_wclk 1 3 1 N
+preplace netloc panel_test_0_PMOD_G0 1 4 1 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 N
+preplace netloc panel_test_0_PMOD_G1 1 4 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430
+preplace netloc panel_test_0_PMOD_R0 1 4 1 NJ
+preplace netloc panel_test_0_PMOD_R1 1 4 1 NJ
+preplace netloc panel_test_0_PMOD_A0 1 4 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 460 420 120 NJ 120 1010
+preplace netloc panel_test_0_PMOD_BLANK 1 4 1 NJ
+preplace netloc panel_test_0_PMOD_A1 1 4 1 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 450 370 760
+preplace netloc panel_axi_0_waddr 1 3 1 N
+preplace netloc panel_axi_0_wen 1 3 1 N
+preplace netloc panel_test_0_PMOD_CLK 1 4 1 NJ
+preplace netloc panel_test_0_PMOD_A2 1 4 1 NJ
+preplace netloc panel_test_0_PMOD_A3 1 4 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 70 NJ 70 NJ 70 NJ
+preplace netloc panel_axi_0_wdata 1 3 1 N
+preplace netloc panel_test_0_PMOD_B0 1 4 1 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 1 430
+preplace netloc panel_test_0_PMOD_B1 1 4 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 280 440 130 760 190 NJ
+preplace netloc panel_test_0_PMOD_LATCH 1 4 1 NJ
+preplace netloc panel_test_0_led 1 4 1 NJ
+levelinfo -pg 1 0 220 610 880 1130 1270 -top 0 -bot 470
 ",
 }
 

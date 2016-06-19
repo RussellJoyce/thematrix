@@ -26,7 +26,7 @@ module matrix
 
 	input	wire			wr_clk,
 	input	wire			wr,
-	input	wire	[10:0]	wr_addr,
+	input	wire	[11:0]	wr_addr,
 	input	wire	[11:0]	wr_data,
 
 	input	wire			buffer_select,
@@ -87,8 +87,8 @@ wire rd_r1_bit, rd_g1_bit, rd_b1_bit, rd_r0_bit, rd_g0_bit, rd_b0_bit;
 // bits [11: 0] are rows  0 to 15  => r0, g0, b0 and in _lo memory
 //
 
-assign wr_hi = wr && wr_addr[9];
-assign wr_lo = wr && !wr_addr[9];
+assign wr_hi = wr && wr_addr[11];
+assign wr_lo = wr && !wr_addr[11];
 
 //dpram1024x12 dpram1024x12_hi
 //(
@@ -114,17 +114,26 @@ assign wr_lo = wr && !wr_addr[9];
 
 bram_top bram_top
 (
-	.clka					(clk),
-	.addra					(rd_addr),
-	.douta					(rd_data[11:0])
+	.clka					(wr_clk),
+	.wea					(wr_lo),
+	.addra					(wr_addr[10:0]),
+	.dina					(wr_data),
+	.clkb					(clk),
+	.addrb					(rd_addr),
+	.doutb					(rd_data[11:0])
 );
 
 bram_bottom bram_bottom
 (
-	.clka					(clk),
-	.addra					(rd_addr),
-	.douta					(rd_data[23:12])
+	.clka					(wr_clk),
+	.wea					(wr_hi),
+	.addra					(wr_addr[10:0]),
+	.dina					(wr_data),
+	.clkb					(clk),
+	.addrb					(rd_addr),
+	.doutb					(rd_data[23:12])
 );
+
 
 //localparam RED  = 24'b0000_0000_1111_1111_0000_0000;
 //localparam BLUE = 24'b0000_0000_1111_0000_0000_1111;

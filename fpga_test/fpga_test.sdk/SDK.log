@@ -44,3 +44,686 @@ con
 ----------------End of Script----------------
 
 17:17:11 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:36:16 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466375759000,  Project:1466370767000
+18:36:16 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:36:17 INFO  : Copied contents of /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+18:36:22 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:36:23 INFO  : 
+18:36:24 INFO  : Updating hardware inferred compiler options for test.
+18:36:24 INFO  : Clearing existing target manager status.
+18:36:26 INFO  : Closing and re-opening the MSS file of ther project test_bsp
+18:36:27 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:36:27 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+18:38:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:38:23 INFO  : FPGA configured successfully with bitstream "/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:38:27 INFO  : Disconnected from the channel tcfchan#1.
+18:38:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:38:28 INFO  : 'fpga -state' command is executed.
+18:38:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:28 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:38:28 INFO  : 'jtag frequency' command is executed.
+18:38:28 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:38:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:38:28 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:38:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:38:28 INFO  : 'stop' command is executed.
+18:38:30 INFO  : 'ps7_init' command is executed.
+18:38:30 INFO  : 'ps7_post_config' command is executed.
+18:38:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:38:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:30 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:38:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:38:30 INFO  : Memory regions updated for context APU
+18:38:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:30 INFO  : 'con' command is executed.
+18:38:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:38:30 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:38:50 INFO  : Disconnected from the channel tcfchan#2.
+18:38:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:38:50 INFO  : 'fpga -state' command is executed.
+18:38:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:38:50 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:38:50 INFO  : 'jtag frequency' command is executed.
+18:38:50 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:38:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:38:53 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:38:53 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:38:53 INFO  : 'stop' command is executed.
+18:38:55 INFO  : 'ps7_init' command is executed.
+18:38:55 INFO  : 'ps7_post_config' command is executed.
+18:38:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:38:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:55 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:38:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:38:55 INFO  : Memory regions updated for context APU
+18:38:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:38:55 INFO  : 'con' command is executed.
+18:38:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:38:55 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:40:15 INFO  : Disconnected from the channel tcfchan#3.
+18:40:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:40:16 INFO  : 'fpga -state' command is executed.
+18:40:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:40:16 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:40:16 INFO  : 'jtag frequency' command is executed.
+18:40:16 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:40:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:40:16 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:40:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:40:16 INFO  : 'stop' command is executed.
+18:40:18 INFO  : 'ps7_init' command is executed.
+18:40:18 INFO  : 'ps7_post_config' command is executed.
+18:40:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:40:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:40:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:40:18 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:40:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:40:18 INFO  : Memory regions updated for context APU
+18:40:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:40:18 INFO  : 'con' command is executed.
+18:40:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:40:18 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:44:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:44:44 INFO  : FPGA configured successfully with bitstream "/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:44:49 INFO  : Disconnected from the channel tcfchan#4.
+18:44:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:44:49 INFO  : 'fpga -state' command is executed.
+18:44:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:49 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:44:49 INFO  : 'jtag frequency' command is executed.
+18:44:49 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:44:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:44:49 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:44:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:44:49 INFO  : 'stop' command is executed.
+18:44:51 INFO  : 'ps7_init' command is executed.
+18:44:51 INFO  : 'ps7_post_config' command is executed.
+18:44:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:44:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:51 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:44:51 INFO  : Memory regions updated for context APU
+18:44:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:51 INFO  : 'con' command is executed.
+18:44:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:44:51 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:46:42 INFO  : Disconnected from the channel tcfchan#5.
+18:46:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:46:42 INFO  : 'fpga -state' command is executed.
+18:46:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:46:42 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:46:42 INFO  : 'jtag frequency' command is executed.
+18:46:42 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:46:42 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:46:42 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:46:42 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:46:42 INFO  : 'stop' command is executed.
+18:46:44 INFO  : 'ps7_init' command is executed.
+18:46:44 INFO  : 'ps7_post_config' command is executed.
+18:46:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:46:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:45 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:46:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:46:45 INFO  : Memory regions updated for context APU
+18:46:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:45 INFO  : 'con' command is executed.
+18:46:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:46:45 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:47:31 INFO  : Disconnected from the channel tcfchan#6.
+18:47:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:47:32 INFO  : 'fpga -state' command is executed.
+18:47:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:47:32 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:47:32 INFO  : 'jtag frequency' command is executed.
+18:47:32 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:47:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:47:32 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:47:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:47:32 INFO  : 'stop' command is executed.
+18:47:34 INFO  : 'ps7_init' command is executed.
+18:47:34 INFO  : 'ps7_post_config' command is executed.
+18:47:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:47:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:47:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:47:34 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:47:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:47:34 INFO  : Memory regions updated for context APU
+18:47:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:47:34 INFO  : 'con' command is executed.
+18:47:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:47:34 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:56:48 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466376996000,  Project:1466375759000
+18:56:48 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:56:50 INFO  : Copied contents of /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+18:56:55 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:56:56 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-dce2dfb367cc42189b6339532d81a18c-rtkit-daemon.service-f6ajaS"
+
+18:56:56 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-dce2dfb367cc42189b6339532d81a18c-systemd-timesyncd.service-teoDOL"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/vmware-root"
+
+18:56:56 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-dce2dfb367cc42189b6339532d81a18c-colord.service-FJ3xWs"
+
+18:56:56 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+18:56:56 ERROR : Error updating BSP project MSS files.
+18:56:57 INFO  : Updating hardware inferred compiler options for test.
+18:56:57 INFO  : Clearing existing target manager status.
+18:56:57 INFO  : Closing and re-opening the MSS file of ther project test_bsp
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 INFO  : Unable to read in MSS file /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test_bsp/system.mss : null
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 INFO  : Unable to read in MSS file /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test_bsp/system.mss : null
+18:56:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+18:56:57 ERROR : Failed to closesw "/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test_bsp/system.mss"
+Reason: Cannot close sw design '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test_bsp/system.mss'.
+Design is not opened in the current session.
+
+
+18:56:57 INFO  : Closing and re-opening the MSS file of ther project test_bsp
+18:56:57 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:56:57 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+18:57:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:57:12 INFO  : FPGA configured successfully with bitstream "/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+18:57:22 INFO  : Disconnected from the channel tcfchan#7.
+18:57:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:57:22 INFO  : 'fpga -state' command is executed.
+18:57:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:22 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:57:22 INFO  : 'jtag frequency' command is executed.
+18:57:22 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:57:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:57:22 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:57:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:57:22 INFO  : 'stop' command is executed.
+18:57:24 INFO  : 'ps7_init' command is executed.
+18:57:24 INFO  : 'ps7_post_config' command is executed.
+18:57:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:57:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:24 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:57:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:57:24 INFO  : Memory regions updated for context APU
+18:57:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:24 INFO  : 'con' command is executed.
+18:57:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:57:24 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:57:41 INFO  : Disconnected from the channel tcfchan#8.
+18:57:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:57:41 INFO  : 'fpga -state' command is executed.
+18:57:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:41 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:57:41 INFO  : 'jtag frequency' command is executed.
+18:57:41 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:57:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:57:41 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:57:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:57:41 INFO  : 'stop' command is executed.
+18:57:43 INFO  : 'ps7_init' command is executed.
+18:57:43 INFO  : 'ps7_post_config' command is executed.
+18:57:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:57:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:43 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:57:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:57:43 INFO  : Memory regions updated for context APU
+18:57:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:43 INFO  : 'con' command is executed.
+18:57:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:57:43 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:58:04 INFO  : Disconnected from the channel tcfchan#9.
+18:58:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:58:04 INFO  : 'fpga -state' command is executed.
+18:58:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:04 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:58:04 INFO  : 'jtag frequency' command is executed.
+18:58:04 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:58:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:04 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:58:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:04 INFO  : 'stop' command is executed.
+18:58:06 INFO  : 'ps7_init' command is executed.
+18:58:06 INFO  : 'ps7_post_config' command is executed.
+18:58:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:58:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:06 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:58:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:58:06 INFO  : Memory regions updated for context APU
+18:58:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:07 INFO  : 'con' command is executed.
+18:58:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:58:07 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:58:18 INFO  : Disconnected from the channel tcfchan#10.
+18:58:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:58:18 INFO  : 'fpga -state' command is executed.
+18:58:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:18 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:58:18 INFO  : 'jtag frequency' command is executed.
+18:58:18 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:58:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:18 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:58:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:18 INFO  : 'stop' command is executed.
+18:58:20 INFO  : 'ps7_init' command is executed.
+18:58:20 INFO  : 'ps7_post_config' command is executed.
+18:58:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:58:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:20 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:58:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:58:20 INFO  : Memory regions updated for context APU
+18:58:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:20 INFO  : 'con' command is executed.
+18:58:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:58:20 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:58:53 INFO  : Disconnected from the channel tcfchan#11.
+18:58:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:58:53 INFO  : 'fpga -state' command is executed.
+18:58:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:53 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:58:53 INFO  : 'jtag frequency' command is executed.
+18:58:53 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:58:53 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:53 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:58:53 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:58:53 INFO  : 'stop' command is executed.
+18:58:55 INFO  : 'ps7_init' command is executed.
+18:58:55 INFO  : 'ps7_post_config' command is executed.
+18:58:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:58:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:55 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:58:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:58:55 INFO  : Memory regions updated for context APU
+18:58:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:55 INFO  : 'con' command is executed.
+18:58:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:58:55 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+18:59:36 INFO  : Disconnected from the channel tcfchan#12.
+18:59:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+18:59:36 INFO  : 'fpga -state' command is executed.
+18:59:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:59:36 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+18:59:36 INFO  : 'jtag frequency' command is executed.
+18:59:36 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:59:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:59:36 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+18:59:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+18:59:36 INFO  : 'stop' command is executed.
+18:59:38 INFO  : 'ps7_init' command is executed.
+18:59:38 INFO  : 'ps7_post_config' command is executed.
+18:59:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:59:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:39 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:59:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+18:59:39 INFO  : Memory regions updated for context APU
+18:59:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:39 INFO  : 'con' command is executed.
+18:59:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+18:59:39 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+19:00:17 INFO  : Disconnected from the channel tcfchan#13.
+19:00:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+19:00:17 INFO  : 'fpga -state' command is executed.
+19:00:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:00:17 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+19:00:17 INFO  : 'jtag frequency' command is executed.
+19:00:17 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:00:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:00:17 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:00:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:00:17 INFO  : 'stop' command is executed.
+19:00:19 INFO  : 'ps7_init' command is executed.
+19:00:19 INFO  : 'ps7_post_config' command is executed.
+19:00:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:00:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:20 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:00:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+19:00:20 INFO  : Memory regions updated for context APU
+19:00:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:20 INFO  : 'con' command is executed.
+19:00:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+19:00:20 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+19:00:57 INFO  : Disconnected from the channel tcfchan#14.
+19:00:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+19:00:57 INFO  : 'fpga -state' command is executed.
+19:00:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:00:58 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+19:00:58 INFO  : 'jtag frequency' command is executed.
+19:00:58 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:00:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:00:58 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:00:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:00:58 INFO  : 'stop' command is executed.
+19:01:00 INFO  : 'ps7_init' command is executed.
+19:01:00 INFO  : 'ps7_post_config' command is executed.
+19:01:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:01:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:00 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:01:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+19:01:00 INFO  : Memory regions updated for context APU
+19:01:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:00 INFO  : 'con' command is executed.
+19:01:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+19:01:00 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+19:01:21 INFO  : Disconnected from the channel tcfchan#15.
+19:01:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+19:01:21 INFO  : 'fpga -state' command is executed.
+19:01:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:01:21 INFO  : Jtag cable 'Digilent Zybo 210279771822A' is selected.
+19:01:21 INFO  : 'jtag frequency' command is executed.
+19:01:21 INFO  : Sourcing of '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:01:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:01:21 INFO  : Hardware design information is loaded from '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+19:01:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0' command is executed.
+19:01:21 INFO  : 'stop' command is executed.
+19:01:23 INFO  : 'ps7_init' command is executed.
+19:01:23 INFO  : 'ps7_post_config' command is executed.
+19:01:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:23 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:01:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:23 INFO  : The application '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:01:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+loadhw /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+dow /home/russell/leds/thematrix/fpga_test/fpga_test.sdk/test/Debug/test.elf
+----------------End of Script----------------
+
+19:01:23 INFO  : Memory regions updated for context APU
+19:01:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:23 INFO  : 'con' command is executed.
+19:01:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279771822A"} -index 0
+con
+----------------End of Script----------------
+
+19:01:23 INFO  : Launch script is exported to file '/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local_test.elf.tcl'
+19:01:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:01:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279771822A" && level==0} -index 1' command is executed.
+19:01:39 INFO  : FPGA configured successfully with bitstream "/home/russell/leds/thematrix/fpga_test/fpga_test.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
