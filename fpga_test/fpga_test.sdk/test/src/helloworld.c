@@ -66,7 +66,8 @@ int main()
     	*(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + i) = 0x000;
     }
 
-    *(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + 1) = 0xFFF;
+    *(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + (128*0 + 4)) = 0xFFF;
+    *(((volatile u32 *)XPAR_PANEL_AXI_0_S00_AXI_BASEADDR) + (128*2 + 4)) = 0x00F;
 
     cleanup_platform();
     return 0;
