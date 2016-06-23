@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sun Jun 19 18:53:14 2016">
+<application name="pa" timeStamp="Thu Jun 23 18:13:34 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="7126e707dbe34ce2928ffe6334a01871" type="ProjectID"/>
 <property name="ProjectIteration" value="14" type="ProjectIteration"/>
@@ -20,20 +20,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSources" value="1" type="JavaHandler"/>
 <property name="AutoConnectPort" value="8" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="1" type="JavaHandler"/>
-<property name="CoreView" value="4" type="JavaHandler"/>
+<property name="CoreView" value="6" type="JavaHandler"/>
 <property name="CreateTopHDL" value="2" type="JavaHandler"/>
 <property name="CustomizeRSBBlock" value="4" type="JavaHandler"/>
 <property name="EditDelete" value="3" type="JavaHandler"/>
 <property name="EditRedo" value="2" type="JavaHandler"/>
-<property name="FileExit" value="1" type="JavaHandler"/>
+<property name="FileExit" value="2" type="JavaHandler"/>
 <property name="FlipToViewTaskSynthesis" value="1" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="8" type="JavaHandler"/>
 <property name="LaunchProgramFpga" value="5" type="JavaHandler"/>
-<property name="NewExportHardware" value="3" type="JavaHandler"/>
-<property name="NewLaunchHardware" value="2" type="JavaHandler"/>
-<property name="OpenBlockDesign" value="4" type="JavaHandler"/>
+<property name="NewExportHardware" value="4" type="JavaHandler"/>
+<property name="NewLaunchHardware" value="4" type="JavaHandler"/>
+<property name="OpenBlockDesign" value="5" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="6" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="10" type="JavaHandler"/>
+<property name="OpenProject" value="1" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="12" type="JavaHandler"/>
 <property name="RecustomizeCore" value="8" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="7" type="JavaHandler"/>
 <property name="ReportIPStatus" value="2" type="JavaHandler"/>
@@ -43,12 +44,41 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SaveFileProxyHandler" value="7" type="JavaHandler"/>
 <property name="SaveRSBDesign" value="9" type="JavaHandler"/>
 <property name="ShowView" value="1" type="JavaHandler"/>
-<property name="UpgradeIP" value="13" type="JavaHandler"/>
+<property name="UpgradeIP" value="14" type="JavaHandler"/>
 <property name="ValidateRSBDesign" value="2" type="JavaHandler"/>
 <property name="ViewLayoutCmd" value="1" type="JavaHandler"/>
 <property name="ViewTaskIPIntegrator" value="7" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="1" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="4" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="IP, IP" value="1" type="GuiResourceData"/>
+<property name="OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, save_rsb_design" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, IP Catalog], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Project Settings], 1, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, Upgrade Selected" value="2" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="4" type="GuiResourceData"/>
+<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_IP_CATALOG, IP Catalog" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, Refresh IP Catalog" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsIPPage_TABBED_PANE, PAResourceOtoP.ProjectSettingsIPPage_REPOSITORY_MANAGER, Repository Manager, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsIPRepositoryPanel_ADD_REPOSITORY, Add Repository" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsIPRepositoryPanel_REPOSITORY_CHOOSER, /home/russell/leds/thematrix/panel_axi_1.0, 0" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsIPRepositoryPanel_REPOSITORY_CHOOSER, /home/russell/leds/thematrix/panel_test/panel_test.srcs/sources_1, 1" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProjectSettingsIPRepositoryPanel_REPOSITORY_CHOOSER, /home/russell/leds/thematrix/panel_test/panel_test.srcs/sources_1, 2" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL, Skip" value="2" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SystemTab_SHOW_IP_STATUS, Show IP Status" value="2" type="GuiResourceData"/>
+<property name="RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, Remove" value="2" type="GuiResourceData"/>
+<property name="RDIResource.AddRepositoryInfoDialog_INFO_LIST,   panel_axi  (/home/russell/leds/thematrix" value="1" type="GuiResourceData"/>
+<property name="RDIResource.AddRepositoryInfoDialog_OK, OK" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseReportTab_RERUN, Rerun" value="4" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="10" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="8" type="TclMode"/>
 </item>
 </section>
 </application>

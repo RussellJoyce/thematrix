@@ -10,18 +10,19 @@
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
-    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
-    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
-    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
-    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="CompiledLibDirModelSim" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="/home/russell/leds/thematrix/panel_test/panel_test.cache/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val="digilentinc.com:zybo:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PSRCDIR/sources_1"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="XPMLibraries" Val="XPM_CDC"/>
+    <Option Name="XPMLibraries" Val="XPM_MEMORY"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/panel_test.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/panel_test.ip_user_files/ipstatic"/>
@@ -190,18 +191,14 @@
     </Run>
     <Run Id="bram_top_synth_1" Type="Ft3:Synth" SrcSet="bram_top" Part="xc7z010clg400-1" ConstrsSet="bram_top" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/bram_top_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="bram_bottom_synth_1" Type="Ft3:Synth" SrcSet="bram_bottom" Part="xc7z010clg400-1" ConstrsSet="bram_bottom" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/bram_bottom_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -236,9 +233,7 @@
     </Run>
     <Run Id="bram_top_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="bram_top" Description="Default settings for Implementation." SynthRun="bram_top_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -252,9 +247,7 @@
     </Run>
     <Run Id="bram_bottom_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="bram_bottom" Description="Default settings for Implementation." SynthRun="bram_bottom_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

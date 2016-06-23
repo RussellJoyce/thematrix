@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="bram_bottom_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1466370212">
-  <File Type="VDS-TIMING-PB" Name="bram_bottom_timing_summary_synth.pb"/>
+  <File Type="RDS-DCP" Name="bram_bottom.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="bram_bottom_utilization_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="bram_bottom_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="bram_bottom_timing_summary_synth.pb"/>
   <File Type="RDS-RDS" Name="bram_bottom.vds"/>
   <File Type="PA-TCL" Name="bram_bottom.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="bram_bottom_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="bram_bottom_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="bram_bottom_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="bram_bottom.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bram_bottom">
     <File Path="$PSRCDIR/sources_1/ip/bram_bottom/bram_bottom.xci">
       <FileInfo>
@@ -35,9 +35,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
