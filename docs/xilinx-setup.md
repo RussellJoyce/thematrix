@@ -1,4 +1,3 @@
-==========
 Xilinx Tools Install Instructions
 ==========
 
@@ -10,5 +9,5 @@ Xilinx Tools Install Instructions
   - libusb (if not installed) - possibly 32-bit version
   - Runtime: https://reference.digilentinc.com/digilent_adept_2#software_downloads
   - Plugin: https://reference.digilentinc.com/digilent_plugin_xilinx_tools
-    - Copy plugin files from "ISE14x/plugin/" to "/opt/Xilinx/Vivado/<version>/lib/lnx64.o/"
+    - Copy plugin files from `ISE14x/plugin/` to `/opt/Xilinx/Vivado/<version>/lib/lnx64.o/`
 
